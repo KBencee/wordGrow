@@ -10,10 +10,15 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
   if (i == text.length){
-    kiir = false
+    kiir = false;
   }
   if (kiir == false){
-    
+    document.getElementById("szoveg").innerHTML += text.substring(i, end);
+    i--;
+    setTimeout(typeWriter, speed);
+  }
+  if (i == 0){
+    kiir= true;
   }
 }
 
